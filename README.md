@@ -6,7 +6,8 @@
 Following steps will provide a path to configure these nodes from scratch and spin up an instance from Private Cloud Console and associate Proxy ports for external access. 
 
 **Setting up Controller Node:**
-    **1. Install Microstack from snap.**
+    
+  **1. Install Microstack from snap.**
     ![1](https://github.com/Om-Khairnar/WCE-Private-Cloud-main/assets/143726540/c57f32ad-ecb0-419a-be40-68094eab1508)
       
   **2.Initiate Microstack as control node and configure cinder to use LVM backend. Also add ssl certificate to glance config file and restart the microstack.cinder.uwsgi, microstack.cinder.scheduler and microstack.cinder.volume services.**
