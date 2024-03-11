@@ -1,5 +1,17 @@
 ## Private Cloud for WCE
 
+## Implementation and Results
+  For creating a cluster we need 2 computers in the same network, let's say one a Controller Node and other a Compute Node. Configure them with a static IP as restarts can initiate a DHCP and IP address might change. Also make sure these machines have VT support if they are virtual machines on some hypervisor like VMware ESXi.
+
+Following steps will provide a path to configure these nodes from scratch and spin up an instance from Private Cloud Console and associate Proxy ports for external access. 
+
+**Setting up Controller Node:**
+    **1. Install Microstack from snap.**
+    ![1](https://github.com/Om-Khairnar/WCE-Private-Cloud-main/assets/143726540/c57f32ad-ecb0-419a-be40-68094eab1508)
+     **2.Initiate Microstack as control node and configure cinder to use LVM backend. Also add ssl certificate to glance config file and restart the microstack.cinder.uwsgi, microstack.cinder.scheduler and microstack.cinder.volume services.**
+    ![2](https://github.com/Om-Khairnar/WCE-Private-Cloud-main/assets/143726540/a74ad9d1-8f13-4603-a0ba-41f57d9ca2a0)
+    **3.Command microstack to add another compute node to the cluster. It gives us the connection string that we will use while setting up microstack on the compute node.**
+    ![3](https://github.com/Om-Khairnar/WCE-Private-Cloud-main/assets/143726540/001cf49a-1011-440a-8c6e-0c3a715c6139)
 
 ## Private Cloud Console :
    **1. Login using Moodle Credentials.**
